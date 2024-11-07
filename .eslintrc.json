@@ -1,0 +1,91 @@
+{
+    "extends": [
+      "next/core-web-vitals",
+      "next/typescript",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "unused-imports",
+      "prettier",
+      "simple-import-sort"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          "vars": "all",
+          "varsIgnorePattern": "^_",
+          "args": "after-used",
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+      "react/jsx-first-prop-new-line": "off",
+      "react/jsx-max-props-per-line": "off",
+      "react/jsx-indent-props": "off",
+      "@typescript-eslint/no-unnecessary-type-constraint": "off",
+      "react/jsx-closing-bracket-location": [
+        2,
+        "tag-aligned"
+      ],
+      "@typescript-eslint/no-explicit-any": "off",
+      "react/no-unescaped-entities": "off",
+      "react-hooks/exhaustive-deps": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.js",
+          "*.jsx",
+          "*.ts",
+          "*.tsx"
+        ],
+        "rules": {
+          "simple-import-sort/imports": [
+            "error",
+            {
+              "groups": [
+                // Packages `react` related packages come first.
+                [
+                  "^react",
+                  "^@?\\w"
+                ],
+                // Internal packages.
+                [
+                  "^(@|components)(/.*|$)"
+                ],
+                // Side effect imports.
+                [
+                  "^\\u0000"
+                ],
+                // Parent imports. Put `..` last.
+                [
+                  "^\\.\\.(?!/?$)",
+                  "^\\.\\./?$"
+                ],
+                // Other relative imports. Put same-folder imports and `.` last.
+                [
+                  "^\\./(?=.*/)(?!/?$)",
+                  "^\\.(?!/?$)",
+                  "^\\./?$"
+                ],
+                // Style imports.
+                [
+                  "^.+\\.?(css)$"
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }

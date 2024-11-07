@@ -1,0 +1,12 @@
+<!--/dist
+
+/node_modules
+/.next
+
+/package.json
+/package-lock.json
+
+/.eslintcache
+/.eslintrc.json
+
+/README.md-->
