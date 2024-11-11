@@ -12,10 +12,10 @@ export default function Header() {
             <Box maw={1280} m={"auto"}>
                 <Flex align={"center"} justify={"space-between"}>
                     <Image
-                        src="/logos/logo-transparent-light.png"
+                        src="/logos/logo.png"
                         alt="Liar's Night Logo"
-                        width={55}
-                        height={55}
+                        width={75}
+                        height={75}
                         priority
                     />
                     <Flex gap={60}>

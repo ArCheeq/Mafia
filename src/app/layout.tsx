@@ -15,7 +15,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-    title: "Liar’s Night",
+    title: "Liar’s Night | Mafia Online",
     description:
         "Dive into the thrilling world of deception and strategy with Liar’s Night, an immersive online Mafia game where you must outwit your opponents to survive.",
     keywords:

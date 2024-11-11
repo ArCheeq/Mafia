@@ -1,23 +1,16 @@
 import { PropsWithChildren } from "react";
 import { createTheme, MantineProvider, MantineProviderProps } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
-import localFont from "next/font/local";
+import { Raleway } from "next/font/google";
 
-const geistSans = localFont({
-    src: "../app/fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
-});
-
-const geistMono = localFont({
-    src: "../app/fonts/GeistVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
+const raleway = Raleway({
+    weight: ["200", "300", "400", "500", "700"],
+    subsets: ["latin"],
+    variable: "--font-raleway",
 });
 
 const theme = createTheme({
-    fontFamily: geistSans.style.fontFamily,
-    fontFamilyMonospace: geistMono.style.fontFamily,
+    fontFamily: raleway.style.fontFamily,
     primaryColor: "deep-red",
     colors: {
         "deep-red": [
