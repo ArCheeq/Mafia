@@ -1,0 +1,20 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 12px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: var(--mantine-color-deep-red-8);
+        border-color: var(--mantine-color-deep-red-8);
+    }
+}
+
+.divider {
+    position: relative;
+}
