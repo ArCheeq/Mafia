@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 
 import Providers from "@/components/Providers";
-import Header from "@/features/Header";
 
 import "@mantine/core/styles.css";
 import "./globals.css";
@@ -33,10 +32,7 @@ export default function RootLayout({
                 <ColorSchemeScript />
             </head>
             <body style={{ ...raleway.style }} className={`${raleway.className}`}>
-                <Providers>
-                    <Header />
-                    {children}
-                </Providers>
+                <Providers>{children}</Providers>
             </body>
         </html>
     );

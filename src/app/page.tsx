@@ -1,11 +1,10 @@
-import { Fragment } from "react";
-
 import Homepage from "@/features/Homepage";
+import PageLayout from "@/layouts/PageLayout";
 
 export default function Home() {
     return (
-        <Fragment>
+        <PageLayout>
             <Homepage />
-        </Fragment>
+        </PageLayout>
     );
 }
